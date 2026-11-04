@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae | Craig M. Nielsen</title>
+  <meta name="description" content="Curriculum Vitae of Craig M. Nielsen, NYU Honors Data Science student applying to Statistics and Data Science PhD programs.">
+  <meta name="author" content="Craig M. Nielsen">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+    .cv-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .cv-paper {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 3rem 3.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 3rem;
+    }
+    .cv-header-title {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .cv-header-title h1 {
+      font-size: 2.25rem;
+      margin-bottom: 0.35rem;
+    }
+    .cv-contact-info {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+    }
+    .cv-section-heading {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-primary);
+      border-bottom: 1.5px solid var(--text-primary);
+      padding-bottom: 0.25rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .cv-item {
+      margin-bottom: 1.25rem;
+    }
+    .cv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .cv-item-sub {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+    }
+    .cv-item ul {
+      margin-top: 0.25rem;
+      padding-left: 1.25rem;
+      list-style-type: disc;
+    }
+    .cv-item ul li {
+      font-family: var(--font-serif);
+      font-size: 0.925rem;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+    }
+    @media (max-width: 768px) {
+      .cv-paper {
+        padding: 1.75rem 1.25rem;
+      }
+      .cv-item-header, .cv-item-sub {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media print {
+      .cv-top-bar, .site-header, .site-footer {
+        display: none !important;
+      }
+      .cv-paper {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        background: transparent !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="./index.html" class="site-logo">
+        <span class="monogram">CN</span>
+        <span>Craig M. Nielsen</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="./index.html#about">About</a></li>
+          <li><a href="./index.html#research">Research</a></li>
+          <li><a href="./index.html#projects">Projects</a></li>
+          <li><a href="./index.html#coursework">Coursework</a></li>
+          <li><a href="./cv.html" class="active">CV</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Top Action Bar -->
+    <div class="cv-top-bar">
+      <a href="./index.html" class="action-badge">
+        &larr; Back to Home
+      </a>
+      <div style="display: flex; gap: 0.65rem;">
+        <button onclick="window.print()" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.825rem;">
+          <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print / Save PDF
+        </button>
+        <a href="./assets/Craig_Nielsen_CV.pdf" download="Craig_Nielsen_CV.pdf" class="btn btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.825rem;">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download PDF CV
+        </a>
+      </div>
+    </div>
+
+    <!-- CV Paper Container -->
+    <article class="cv-paper">
+      <!-- Header -->
+      <div class="cv-header-title">
+        <h1>Craig M. Nielsen</h1>
+        <div class="cv-contact-info">
+          <span>Middleton, WI / New York, NY</span>
+          <span>&bull;</span>
+          <span>608-504-7635</span>
+          <span>&bull;</span>
+          <a href="mailto:nielsen.craigm@gmail.com">nielsen.craigm@gmail.com</a>
+          <span>&bull;</span>
+          <a href="https://github.com/craigthefirst" target="_blank" rel="noopener noreferrer">github.com/craigthefirst</a>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="cv-section-heading">Education</div>
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>New York University &bull; College of Arts and Science | New York, NY</span>
+          <span>Sep 2023 &ndash; May 2027</span>
+        </div>
+        <div class="cv-item-sub">
+          <span>Honors Bachelor of Science in Data Science | GPA: 3.95 / 4.00</span>
+          <span></span>
+        </div>
+        <div style="font-family: var(--font-serif); font-size: 0.925rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+          <strong>Minors:</strong> Mathematics, Economics, Music
+        </div>
+        <ul>
+          <li><strong>Relevant Coursework:</strong> Honors Real Analysis I, Linear Algebra and Optimization for Machine Learning, Fundamentals of Machine Learning, Calculus III, Probability &amp; Statistics, Causal Inference, Data Management and Analysis, Intermediate Microeconomics, Linear Algebra.</li>
+          <li><strong>Involvement:</strong> NYU All-University Jazz Orchestra Bassist, Music Mentors Collaborative Instructor, NYU Orchestra Bassist, NYU Prague Blog.</li>
+        </ul>
+      </div>
+
+      <!-- Honors and Awards -->
+      <div class="cv-section-heading">Honors and Awards</div>
+      <div class="cv-item">
+        <ul>
+          <li><strong>NYU Dean's Undergraduate Research Fund (DURF):</strong> Awarded $1,250 grant for research on <em>Why People Listen to Sad Music</em>.</li>
+          <li><strong>NYU Dean's Undergraduate Research Fund (DURF):</strong> Applying for $1,250 grant for research on <em>Mapping Timbre Space</em>.</li>
+          <li><strong>NYU Dean's Presidential Honors Society:</strong> Awarded a fully funded study abroad scholarship opportunity.</li>
+          <li><strong>Mercer Street Publication:</strong> Nominated to submit an original essay composition by Professor William Morgan (NYU).</li>
+        </ul>
+      </div>
+
+      <!-- Research Experience -->
+      <div class="cv-section-heading">Research Experience</div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>Research Assistant &bull; Fox Lab NYU | New York, NY</span>
+          <span>Jan 2026 &ndash; Present</span>
+        </div>
+        <div class="cv-item-sub">
+          <span>Advisor: Dr. Pascal Wallisch, Department of Data Science &amp; Neural Science</span>
+        </div>
+        <ul>
+          <li>Meet weekly with Dr. Wallisch to discuss research methodology, cognitive modeling, and empirical data analysis.</li>
+          <li>Running experimental human participant sessions weekly for a study investigating pattern recognition in chess.</li>
+          <li>Awarded a $1,250 grant on <em>Why People Listen to Sad Music</em>.</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>Research Assistant &bull; Dr. Laurence Maloney's Lab NYU | New York, NY</span>
+          <span>July 2026 &ndash; Present</span>
+        </div>
+        <div class="cv-item-sub">
+          <span>Advisor: Dr. Laurence Maloney, Department of Psychology &amp; Center for Neural Science</span>
+        </div>
+        <ul>
+          <li>Meet weekly with Dr. Maloney to discuss mathematical psychophysics, experiment design, and grant writing.</li>
+          <li>Designing an empirical study investigating the metric and geometric representation of timbre perception.</li>
+          <li>Applying for a $1,250 grant on <em>Mapping Timbre Space</em>.</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>Research Assistant &bull; CROWE (Center for Research on the Wisconsin Economy) | Madison, WI</span>
+          <span>June &ndash; July 2025</span>
+        </div>
+        <div class="cv-item-sub">
+          <span>Advisor: Dr. Ananth Seshadri, Department of Economics, University of Wisconsin&ndash;Madison</span>
+        </div>
+        <ul>
+          <li>Worked directly with Dr. Seshadri and met weekly with a postdoctoral researcher on econometric policy evaluation.</li>
+          <li>Created a difference-in-differences causal model measuring the effect of a state corporate tax credit on manufacturing employment.</li>
+          <li>Cleaned, merged, and created data visualizations depicting the tax credit’s effect.</li>
+          <li>Contributed to the publication of the official policy report.</li>
+        </ul>
+      </div>
+
+      <!-- Research Interests -->
+      <div class="cv-section-heading">Research Interests</div>
+      <div style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+        Out-of-distribution generalization, high-dimensional statistics, statistical machine learning theory, causal inference, and machine learning for the social and cognitive sciences.
+      </div>
+
+      <!-- Projects -->
+      <div class="cv-section-heading">Projects</div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>Michelin Star Restaurant App | NYU | New York, NY</span>
+          <span>Jan &ndash; May 2026</span>
+        </div>
+        <div class="cv-item-sub">
+          <span>Fundamentals of Machine Learning course with Dr. Kyunghyun Cho</span>
+        </div>
+        <ul>
+          <li>Solely responsible for the mathematical design and software implementation of the app's recommendation engine.</li>
+          <li>Domain-shifted large Yelp data to sparse Michelin star restaurant reviews in NYC using the Python library Hugging Face.</li>
+          <li>Estimated rating uncertainty distributions using a multi-headed Laplace distribution, employing a corruption function to focus model capacity on target dining distributions.</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>Effect of Corporate Income Tax on Manufacturing Employment | Madison, WI</span>
+          <span>June &ndash; July 2025</span>
+        </div>
+        <div class="cv-item-sub">
+          <span>Center for Research on the Wisconsin Economy (CROWE), UW&ndash;Madison</span>
+        </div>
+        <ul>
+          <li>Created a difference-in-differences causal panel model on the effect of corporate income tax on manufacturing employment in Wisconsin and bordering states.</li>
+          <li>Received and aggregated longitudinal microdata from the Quarterly Census of Employment and Wages (QCEW).</li>
+          <li>Cleaned and analyzed data using Pandas and Matplotlib in Python.</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>ServiceNow AI | Spectrum Brands | Middleton, WI</span>
+          <span>May &ndash; Aug 2024</span>
+        </div>
+        <ul>
+          <li>Created an analysis of business costs and benefits for implementing ServiceNow AI at a Fortune 500 company.</li>
+          <li>Presented findings directly to company leaders, including the CFO, in collaboration with a team of 3 other interns.</li>
+        </ul>
+      </div>
+
+      <!-- Teaching Experience -->
+      <div class="cv-section-heading">Teaching Experience</div>
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>Instructor &bull; Lavner Education | New York, NY</span>
+          <span>June &ndash; Aug 2026</span>
+        </div>
+        <ul>
+          <li>Planned and taught introductory computer science and machine learning courses.</li>
+          <li>Courses included <em>Agentic AI and Machine Learning</em> and <em>Python &amp; App Development</em>.</li>
+          <li>Taught private algorithmic programming lessons.</li>
+        </ul>
+      </div>
+
+      <!-- Other Experience -->
+      <div class="cv-section-heading">Other Experience</div>
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>Desktop Support Intern &bull; Spectrum Brands | Middleton, WI</span>
+          <span>May &ndash; Aug 2024</span>
+        </div>
+        <ul>
+          <li>Responded to service desk calls, resolved ServiceNow tickets through ITIL best practices, and provided technical support.</li>
+          <li>Learned SAP basics through assisting users with tickets and attending technical briefings.</li>
+          <li>Used Azure Device Management to enforce security protocols and assist users.</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>Customer Service &bull; Cafe Zupas and Prairie Cafe | Middleton, WI</span>
+          <span>June 2021 &ndash; Aug 2023</span>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="cv-section-heading">Skills</div>
+      <div class="cv-item">
+        <ul>
+          <li><strong>Programming Languages:</strong> Python, R, SQL, Java, JavaScript, MATLAB</li>
+          <li><strong>Python Packages:</strong> PyTorch, TensorFlow, Matplotlib, Pandas, NumPy, scikit-learn, Hugging Face</li>
+          <li><strong>Business Applications &amp; Tools:</strong> Power BI, Excel, ServiceNow, Git, LaTeX, Linux/Unix</li>
+          <li><strong>Languages:</strong> English (Native), German (Intermediate B2 proficiency)</li>
+        </ul>
+      </div>
+
+      <!-- Paid Musical Performances -->
+      <div class="cv-section-heading">Paid Musical Performances</div>
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <span>La Brioche | Madison, WI</span>
+          <span>July 2024 &ndash; 2025</span>
+        </div>
+        <div class="cv-item-header" style="margin-top: 0.35rem;">
+          <span>Harmony Bar and Grill | Madison, WI</span>
+          <span>July 2024</span>
+        </div>
+        <div class="cv-item-header" style="margin-top: 0.35rem;">
+          <span>Middleton High School Band &amp; Orchestra Parents Association | Middleton, WI</span>
+          <span>May 2023</span>
+        </div>
+        <div class="cv-item-header" style="margin-top: 0.35rem;">
+          <span>Dane County Buy Local | Middleton, WI</span>
+          <span>Feb 2023</span>
+        </div>
+      </div>
+
+      <!-- References -->
+      <div class="cv-section-heading">Academic References</div>
+      <div class="cv-item">
+        <ul>
+          <li><strong>Pascal Wallisch, PhD:</strong> Data Science, Neural Science, and Psychology | New York University</li>
+          <li><strong>Ananth Seshadri, PhD:</strong> Mary Sue and Mike Shannon Chair in Economics | University of Wisconsin &ndash; Madison</li>
+          <li><strong>Laurence Maloney, PhD:</strong> Psychology and Neural Science | New York University</li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="current-year">2026</span> Craig M. Nielsen &bull; All rights reserved.</p>
+      <p><a href="./index.html">&larr; Return to Craig M. Nielsen's Homepage</a></p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
+

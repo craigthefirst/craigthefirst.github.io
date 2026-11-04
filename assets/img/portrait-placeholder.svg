@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f1f3f5"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="400" height="480" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="397" height="477" rx="15" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- Silhouette Figure -->
+  <g transform="translate(0, -10)">
+    <!-- Head -->
+    <circle cx="200" cy="180" r="62" fill="url(#avatarGrad)"/>
+    <!-- Shoulders / Torso -->
+    <path d="M 105 320 C 105 250, 150 235, 200 235 C 250 235, 295 250, 295 320 Z" fill="url(#avatarGrad)"/>
+  </g>
+
+  <!-- Camera / Upload Badge -->
+  <g transform="translate(200, 310)">
+    <circle cx="0" cy="0" r="26" fill="#1e3a8a" filter="drop-shadow(0px 3px 6px rgba(0,0,0,0.15))"/>
+    <path d="M -10 -5 L -8 -9 L 8 -9 L 10 -5 L 14 -5 C 15.1 -5, 16 -4.1, 16 -3 L 16 9 C 16 10.1, 15.1 11, 14 11 L -14 11 C -15.1 11, -16 10.1, -16 9 L -16 -3 C -16 -4.1, -15.1 -5, -14 -5 Z M 0 7 C 4.4 7, 8 3.4, 8 -1 C 8 -5.4, 4.4 -9, 0 -9 C -4.4 -9, -8 -5.4, -8 -1 C -8 3.4, -4.4 7, 0 7 Z" fill="#ffffff" transform="scale(0.85) translate(0, 1)"/>
+  </g>
+
+  <!-- Instructional Text -->
+  <text x="200" y="375" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" fill="#334155">Photo Placeholder</text>
+  <text x="200" y="400" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="400" fill="#64748b">Upload photo as</text>
+  <rect x="100" y="415" width="200" height="26" rx="6" fill="#e2e8f0"/>
+  <text x="200" y="432" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#0f172a">assets/img/profile.jpg</text>
+</svg>

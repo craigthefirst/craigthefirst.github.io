@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Craig M. Nielsen | Data Science & Statistics</title>
+  <meta name="description" content="Academic personal website of Craig M. Nielsen, Honors Data Science student at New York University applying to PhD programs in Statistics and Data Science.">
+  <meta name="author" content="Craig M. Nielsen">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+
+  <!-- Google Fonts: Newsreader (Editorial Serif) & Inter (Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#about" class="site-logo">
+        <span class="monogram">CN</span>
+        <span>Craig M. Nielsen</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#coursework">Coursework</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="./cv.html">CV</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Hero / Bio Section -->
+    <section id="about" class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1>Craig M. Nielsen</h1>
+          <div class="hero-status">Honors B.S. in Data Science &bull; New York University</div>
+          <div class="hero-affiliation">Minors in Mathematics, Economics, and Music &bull; GPA 3.95</div>
+          <div class="hero-aspirations">Prospective PhD Applicant in Statistics &amp; Data Science</div>
+
+          <p class="lead">
+            I am an undergraduate honors student in Data Science at New York University (CAS '27). My research interests lie at the intersection of <strong>out-of-distribution generalization</strong>, <strong>high-dimensional statistics</strong>, and <strong>causal inference</strong> for empirical social and cognitive sciences.
+          </p>
+
+          <p>
+            At NYU, I conduct research in the <a href="#research">Fox Lab</a> with Dr. Pascal Wallisch studying cognitive pattern recognition and music perception, and in the <a href="#research">Maloney Lab</a> with Dr. Laurence Maloney investigating the mathematical geometry of auditory timbre perception. Previously, I worked on empirical econometric policy modeling at the University of Wisconsin–Madison's <a href="#research">CROWE</a> with Dr. Ananth Seshadri.
+          </p>
+
+          <p>
+            Outside of mathematics and statistics, I am an upright and electric bassist performing with the NYU All-University Jazz Orchestra and NYU Orchestra, and a music educator.
+          </p>
+
+          <!-- Quick Contact Links -->
+          <div class="quick-links">
+            <a href="mailto:nielsen.craigm@gmail.com" title="Email Craig">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              nielsen.craigm@gmail.com
+            </a>
+            <a href="https://github.com/craigthefirst" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+              <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              GitHub
+            </a>
+            <a href="./cv.html" title="Curriculum Vitae">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              Curriculum Vitae
+            </a>
+            <span>
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              New York, NY / Middleton, WI
+            </span>
+          </div>
+        </div>
+
+        <!-- Dedicated Photo Space (with placeholder and seamless fallback) -->
+        <div class="hero-photo-wrapper">
+          <div class="profile-photo-container">
+            <img
+              id="profile-img"
+              class="profile-photo"
+              src="./assets/img/profile.jpg"
+              alt="Craig M. Nielsen"
+              onerror="this.onerror=null; this.src='./assets/img/portrait-placeholder.svg';"
+            >
+          </div>
+          <div class="photo-caption">Craig M. Nielsen</div>
+        </div>
+      </div>
+
+      <!-- Core Research Interests -->
+      <h2 style="margin-top: 2.25rem;">
+        Research Interests
+        <span class="section-tag">Focus Areas</span>
+      </h2>
+      <div class="interests-grid">
+        <div class="interest-card">
+          <h4>
+            <span class="icon">&bull;</span>
+            Out-of-Distribution Generalization
+          </h4>
+          <p>
+            Statistical foundations of domain adaptation, covariate and concept shift, invariant representations, and robustness when test distributions diverge from training environments.
+          </p>
+        </div>
+
+        <div class="interest-card">
+          <h4>
+            <span class="icon">&bull;</span>
+            High-Dimensional Statistics
+          </h4>
+          <p>
+            Concentration of measure, high-dimensional estimation, regularized empirical risk minimization, and theoretical performance bounds for modern machine learning algorithms.
+          </p>
+        </div>
+
+        <div class="interest-card">
+          <h4>
+            <span class="icon">&bull;</span>
+            Causal Inference &amp; Econometrics
+          </h4>
+          <p>
+            Difference-in-differences, quasi-experimental methods, observational causal discovery, and identification strategies applied to public policy and socio-economic dynamics.
+          </p>
+        </div>
+
+        <div class="interest-card">
+          <h4>
+            <span class="icon">&bull;</span>
+            ML for Cognitive &amp; Social Science
+          </h4>
+          <p>
+            Probabilistic modeling of human perceptual geometry (e.g. timbre space), behavioral decision-making, and empirical psychophysics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Experience -->
+    <section id="research">
+      <h2>
+        Research Experience
+        <span class="section-tag">Academic Labs</span>
+      </h2>
+
+      <div class="entry-list">
+        <!-- Fox Lab NYU -->
+        <div class="entry-item">
+          <div class="entry-header">
+            <span class="entry-title">Research Assistant &bull; Fox Lab</span>
+            <span class="entry-date">Jan 2026 &ndash; Present</span>
+          </div>
+          <div class="entry-subtitle">
+            <span class="institution">New York University</span>
+            <span>&bull;</span>
+            <span class="advisor">Advisor: Dr. Pascal Wallisch (Department of Data Science &amp; Neural Science)</span>
+          </div>
+          <ul>
+            <li>Meet weekly to collaborate on statistical methodology, cognitive modeling, and empirical data analysis.</li>
+            <li>Run human participants weekly in laboratory experimental sessions evaluating perceptual pattern recognition in chess.</li>
+            <li>Awarded a competitive <strong>$1,250 research grant</strong> from the NYU Dean’s Undergraduate Research Fund (DURF) for research on <em>Why People Listen to Sad Music</em>.</li>
+          </ul>
+          <div>
+            <span class="award-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              NYU Dean’s Undergraduate Research Fund ($1,250 Grant Recipient)
+            </span>
+          </div>
+        </div>
+
+        <!-- Laurence Maloney Lab NYU -->
+        <div class="entry-item">
+          <div class="entry-header">
+            <span class="entry-title">Research Assistant &bull; Dr. Laurence Maloney's Lab</span>
+            <span class="entry-date">July 2026 &ndash; Present</span>
+          </div>
+          <div class="entry-subtitle">
+            <span class="institution">New York University</span>
+            <span>&bull;</span>
+            <span class="advisor">Advisor: Dr. Laurence Maloney (Department of Psychology &amp; Center for Neural Science)</span>
+          </div>
+          <ul>
+            <li>Collaborate weekly on mathematical psychophysics, computational experiment design, and scientific grant writing.</li>
+            <li>Designing an empirical psychophysical study investigating the non-Euclidean geometry and multidimensional representation of musical timbre perception.</li>
+            <li>Formulated and submitted a grant proposal to the NYU Dean’s Undergraduate Research Fund for <em>Mapping Timbre Space</em> ($1,250).</li>
+          </ul>
+          <div>
+            <span class="award-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              DURF Grant Applicant: Mapping Timbre Space ($1,250)
+            </span>
+          </div>
+        </div>
+
+        <!-- CROWE UW-Madison -->
+        <div class="entry-item">
+          <div class="entry-header">
+            <span class="entry-title">Research Assistant &bull; Center for Research on the Wisconsin Economy (CROWE)</span>
+            <span class="entry-date">June 2025 &ndash; July 2025</span>
+          </div>
+          <div class="entry-subtitle">
+            <span class="institution">University of Wisconsin&ndash;Madison</span>
+            <span>&bull;</span>
+            <span class="advisor">Advisor: Dr. Ananth Seshadri (Department of Economics)</span>
+          </div>
+          <ul>
+            <li>Formulated and estimated an econometric difference-in-differences (DiD) model evaluating the causal effect of state manufacturing corporate tax credits on employment growth across Wisconsin and neighboring states.</li>
+            <li>Ingested, cleaned, and aggregated extensive longitudinal administrative records from the Quarterly Census of Employment and Wages (QCEW) using Python (Pandas, NumPy).</li>
+            <li>Constructed causal statistical visualizations and counterfactual trajectory plots quantifying state-level employment elasticity.</li>
+            <li>Contributed analytical modeling and statistical graphics to the formal policy report.</li>
+          </ul>
+          <div class="entry-actions">
+            <a href="https://crowe.wisc.edu/" target="_blank" rel="noopener noreferrer" class="action-badge">
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              CROWE Research Center
+            </a>
+            <span class="action-badge">Econometrics / Panel DiD</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Projects -->
+    <section id="projects">
+      <h2>
+        Selected Projects
+        <span class="section-tag">Machine Learning &amp; Applied Statistics</span>
+      </h2>
+
+      <!-- Michelin Star Restaurant App -->
+      <div class="project-card">
+        <div class="card-header">
+          <span class="card-title">Michelin Star Restaurant Recommendation Engine</span>
+          <span class="entry-date">Jan &ndash; May 2026</span>
+        </div>
+        <div class="card-meta">
+          NYU Fundamentals of Machine Learning &bull; Course with Dr. Kyunghyun Cho
+        </div>
+        <p>
+          Engineered the complete recommendation engine designed to overcome severe extreme-sparsity constraints in fine dining reviews. Implemented domain adaptation shifting large-scale general Yelp review corpora into sparse NYC Michelin-starred restaurant review spaces using Hugging Face transformer architectures.
+        </p>
+        <p>
+          Formulated a novel rating distribution estimator utilizing a multi-headed Laplace distribution to model uncertainty and heavy-tailed preferences, paired with an adversarial corruption objective to focus network capacity on target restaurant distributions.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>PyTorch</span>
+          <span>Hugging Face</span>
+          <span>Laplace Distribution</span>
+          <span>Domain Shift</span>
+          <span>Recommendation Systems</span>
+        </div>
+        <div class="entry-actions">
+          <a href="https://github.com/craigthefirst" target="_blank" rel="noopener noreferrer" class="action-badge">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            Code Repository
+          </a>
+          <span class="action-badge">Coursework Project (Cho Lab)</span>
+        </div>
+      </div>
+
+      <!-- Difference-in-Differences Tax Model -->
+      <div class="project-card">
+        <div class="card-header">
+          <span class="card-title">Causal Effect of Corporate Income Tax on Manufacturing Employment</span>
+          <span class="entry-date">June &ndash; July 2025</span>
+        </div>
+        <div class="card-meta">
+          Center for Research on the Wisconsin Economy (CROWE) &bull; UW–Madison
+        </div>
+        <p>
+          Constructed a two-way fixed effects difference-in-differences causal framework to estimate manufacturing employment elasticity following state corporate tax policy reforms. Handled parallel trends validation, robust standard errors clustered by county and state, and dynamic event-study specifications using Quarterly Census of Employment and Wages (QCEW) microdata.
+        </p>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>Matplotlib</span>
+          <span>Econometrics</span>
+          <span>Causal Inference</span>
+          <span>QCEW Data</span>
+        </div>
+      </div>
+
+      <!-- ServiceNow AI Analysis -->
+      <div class="project-card">
+        <div class="card-header">
+          <span class="card-title">Enterprise AI Implementation Cost-Benefit Analysis</span>
+          <span class="entry-date">May &ndash; Aug 2024</span>
+        </div>
+        <div class="card-meta">
+          Spectrum Brands &bull; Middleton, WI
+        </div>
+        <p>
+          Synthesized quantitative financial models evaluating workflow automation and ITIL operational efficiency gains from deploying ServiceNow AI at a Fortune 500 corporation. Presented findings and capital allocation recommendations directly to corporate executive leadership, including the CFO.
+        </p>
+        <div class="tech-stack">
+          <span>ServiceNow AI</span>
+          <span>Financial Modeling</span>
+          <span>Power BI</span>
+          <span>Executive Presentation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Academic Preparation -->
+    <section id="coursework">
+      <h2>
+        Education &amp; Coursework
+        <span class="section-tag">Quantitative Preparation</span>
+      </h2>
+
+      <div class="entry-item" style="margin-bottom: 1.5rem;">
+        <div class="entry-header">
+          <span class="entry-title">New York University &bull; College of Arts and Science</span>
+          <span class="entry-date">Sep 2023 &ndash; May 2027 (Expected)</span>
+        </div>
+        <div class="entry-subtitle">
+          <span class="institution">Honors Bachelor of Science in Data Science</span>
+          <span>&bull;</span>
+          <span style="font-weight: 600; color: var(--link-color);">GPA: 3.95 / 4.00</span>
+        </div>
+        <p style="margin-bottom: 0.5rem; color: var(--text-secondary);">
+          <strong>Minors:</strong> Mathematics, Economics, Music
+        </p>
+        <p style="margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.95rem;">
+          <strong>Academic Honors:</strong> Dean's Presidential Honors Society (fully funded study abroad scholarship); Dean’s Undergraduate Research Fund Grantee ($1,250); Mercer Street Essay Composition nominee.
+        </p>
+      </div>
+
+      <!-- Categorized Coursework Matrix -->
+      <div class="course-grid">
+        <div class="course-category">
+          <h4>Mathematics &amp; Statistics</h4>
+          <ul>
+            <li>Honors Real Analysis I</li>
+            <li>Probability &amp; Statistics</li>
+            <li>Calculus III (Multivariable)</li>
+            <li>Linear Algebra</li>
+            <li>Linear Algebra &amp; Optimization for ML</li>
+          </ul>
+        </div>
+
+        <div class="course-category">
+          <h4>Data Science &amp; Machine Learning</h4>
+          <ul>
+            <li>Fundamentals of Machine Learning (Cho)</li>
+            <li>Causal Inference</li>
+            <li>Data Management and Analysis</li>
+            <li>Statistical Machine Learning</li>
+          </ul>
+        </div>
+
+        <div class="course-category">
+          <h4>Economics &amp; Humanities</h4>
+          <ul>
+            <li>Intermediate Microeconomics</li>
+            <li>Music Theory &amp; Performance Studies</li>
+            <li>Mercer Street Nominated Composition</li>
+            <li>Dean's Presidential Honors Seminar</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Skills Matrix -->
+      <div class="skills-block">
+        <div class="skill-row">
+          <span class="skill-label">Programming Languages</span>
+          <span class="skill-value">Python, R, SQL, Java, JavaScript, MATLAB</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Statistical &amp; ML Tools</span>
+          <span class="skill-value">PyTorch, TensorFlow, scikit-learn, Pandas, NumPy, Matplotlib, Hugging Face, Statsmodels</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Software &amp; Productivity</span>
+          <span class="skill-value">LaTeX, Git, Linux/Unix, Power BI, Excel, ServiceNow</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Spoken Languages</span>
+          <span class="skill-value">English (Native), German (Intermediate B2 proficiency)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching Experience -->
+    <section id="teaching">
+      <h2>
+        Teaching &amp; Mentorship
+        <span class="section-tag">Instruction</span>
+      </h2>
+
+      <div class="entry-list">
+        <div class="entry-item">
+          <div class="entry-header">
+            <span class="entry-title">Computer Science &amp; Machine Learning Instructor</span>
+            <span class="entry-date">June &ndash; Aug 2026</span>
+          </div>
+          <div class="entry-subtitle">
+            <span class="institution">Lavner Education</span>
+            <span>&bull;</span>
+            <span class="advisor">New York, NY</span>
+          </div>
+          <ul>
+            <li>Designed and taught curriculum for intensive technical summer courses including <em>Agentic AI and Machine Learning</em> and <em>Python &amp; App Development</em>.</li>
+            <li>Provided targeted one-on-one algorithmic coaching and private programming instruction.</li>
+          </ul>
+        </div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <span class="entry-title">Music Mentors Collaborative Instructor</span>
+            <span class="entry-date">Sep 2023 &ndash; Present</span>
+          </div>
+          <div class="entry-subtitle">
+            <span class="institution">New York University</span>
+            <span>&bull;</span>
+            <span class="advisor">New York, NY</span>
+          </div>
+          <ul>
+            <li>Instructed students in double bass technique, ensemble listening, rhythm, and harmonic theory.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music & Interdisciplinary Background -->
+    <section id="music">
+      <h2>
+        Music &amp; Performance
+        <span class="section-tag">Interdisciplinary</span>
+      </h2>
+      <p>
+        In addition to my quantitative studies, I am an active jazz and classical double bassist. Musical performance and ensemble playing have profoundly shaped my academic perspective—cultivating discipline, real-time collaboration, and a deep interest in perceptual geometry and psychoacoustics.
+      </p>
+
+      <div class="entry-list">
+        <div class="entry-item">
+          <div class="entry-header">
+            <span class="entry-title">Orchestral &amp; Jazz Performance</span>
+            <span class="entry-date">2023 &ndash; Present</span>
+          </div>
+          <div class="entry-subtitle">
+            <span class="institution">New York University</span>
+            <span>&bull;</span>
+            <span>New York, NY</span>
+          </div>
+          <ul>
+            <li>Bassist in the <strong>NYU All-University Jazz Orchestra</strong>, performing classic big band and modern contemporary jazz arrangements.</li>
+            <li>Double bassist in the <strong>NYU Orchestra</strong>, performing symphonic literature.</li>
+            <li>Contributing writer for the <em>NYU Prague Blog</em> during academic travel.</li>
+          </ul>
+        </div>
+
+        <div class="entry-item">
+          <div class="entry-header">
+            <span class="entry-title">Paid Musical Engagements</span>
+            <span class="entry-date">2023 &ndash; 2025</span>
+          </div>
+          <div class="entry-subtitle">
+            <span class="institution">Madison &amp; Middleton, WI</span>
+          </div>
+          <ul>
+            <li>Professional bassist bookings at La Brioche (July 2024–2025) and Harmony Bar and Grill (July 2024).</li>
+            <li>Performance for the Middleton High School Band &amp; Orchestra Parents Association (May 2023) and Dane County Buy Local (Feb 2023).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic References -->
+    <section id="references">
+      <h2>
+        Academic References
+        <span class="section-tag">Faculty</span>
+      </h2>
+      <div class="references-grid">
+        <div class="ref-card">
+          <h4>Pascal Wallisch, PhD</h4>
+          <div class="ref-dept">Clinical Associate Professor of Data Science, Neural Science, and Psychology</div>
+          <div class="ref-inst">New York University</div>
+        </div>
+
+        <div class="ref-card">
+          <h4>Ananth Seshadri, PhD</h4>
+          <div class="ref-dept">Mary Sue and Mike Shannon Chair in Economics; Director of CROWE</div>
+          <div class="ref-inst">University of Wisconsin&ndash;Madison</div>
+        </div>
+
+        <div class="ref-card">
+          <h4>Laurence Maloney, PhD</h4>
+          <div class="ref-dept">Professor of Psychology and Neural Science</div>
+          <div class="ref-inst">New York University</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curriculum Vitae Callout -->
+    <section id="cv">
+      <div class="cv-banner">
+        <div class="cv-banner-text">
+          <h3>Curriculum Vitae</h3>
+          <p>Download a PDF copy or view the web-formatted academic CV.</p>
+        </div>
+        <div class="cv-buttons">
+          <a href="./assets/Craig_Nielsen_CV.pdf" class="btn btn-primary" download="Craig_Nielsen_CV.pdf">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download CV (PDF)
+          </a>
+          <a href="./cv.html" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            View Web CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="current-year">2026</span> Craig M. Nielsen &bull; All rights reserved.</p>
+      <p>
+        Built with HTML &amp; CSS &bull; Hosted on <a href="https://github.com/craigthefirst/Personal_Site" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
+
