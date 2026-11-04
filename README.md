@@ -1,55 +1,26 @@
-# Craig M. Nielsen &mdash; Academic Website
+# Craig M. Nielsen &mdash; Academic Website (Local Setup)
 
-Academic personal website designed for PhD applications in **Statistics** and **Data Science**. Styled with clean, book-quality typography inspired by classical academic homepages (e.g., [Grayson R. Davis](https://graysonrdavis.github.io/)).
+Academic personal website designed for PhD applications in **Statistics** and **Data Science**, styled after classical academic homepages (e.g., [Grayson R. Davis](https://graysonrdavis.github.io/)).
 
 ---
 
-## 🚀 Quick Setup & Customization
+## 💻 Running the Site Locally
 
-### 1. Upload Your Photo
-A dedicated portrait space has been reserved for you.
-- Simply drop your headshot image into `assets/img/` named **`profile.jpg`** (or `profile.png`).
-- While no photo is present, the website automatically displays an elegant, custom placeholder with seamless fallback.
+Your website is entirely self-contained. You can keep your GitHub repository **private** without any issues.
 
-```
-Personal_Site/
-└── assets/
-    └── img/
-        └── profile.jpg   <-- Put your headshot photo here!
-```
+### Option 1: 1-Click Server (Recommended)
+Double-click **`start_server.bat`** in Windows File Explorer (or run `./start_server.bat` in PowerShell/Command Prompt).
+- This starts a lightweight local HTTP server with zero dependencies (uses built-in Windows .NET).
+- Automatically opens your default web browser to:
+  ```
+  http://localhost:8000
+  ```
+- To stop the server at any time, simply close the command window or press `Ctrl+C`.
 
-### 2. Add Your PDF Curriculum Vitae
-- Place your compiled PDF CV into the `assets/` folder named **`Craig_Nielsen_CV.pdf`**.
-- The site already has pre-wired download buttons and direct links to this file.
-- Visitors can also view and print the full online version at [`cv.html`](./cv.html).
-
-```
-Personal_Site/
-└── assets/
-    └── Craig_Nielsen_CV.pdf   <-- Put your PDF CV here!
-```
-
-### 3. Deploying to GitHub Pages
-This site is built with pure, modern HTML5, CSS3, and vanilla JavaScript—meaning zero build tools, zero dependencies, and instant loading.
-
-To publish your site live for free on GitHub Pages:
-1. Push your changes to GitHub:
-   ```bash
-   git add .
-   git commit -m "Build academic personal website"
-   git push origin main
-   ```
-2. On GitHub, navigate to your repository: **`craigthefirst/Personal_Site`**.
-3. Go to **Settings** &rarr; **Pages** (in the left sidebar).
-4. Under **Build and deployment**:
-   - **Source**: *Deploy from a branch*
-   - **Branch**: *main*
-   - **Folder**: */ (root)*
-5. Click **Save**. Within 1–2 minutes, your website will be live at:
-   ```
-   https://craigthefirst.github.io/Personal_Site/
-   ```
-*(Tip: If you ever want your site URL to be simply `https://craigthefirst.github.io/`, you can rename the repository to `craigthefirst.github.io` in GitHub Settings!)*
+### Option 2: Direct File Viewing (No Server Needed)
+Because all paths and assets are relative, you can also view the website directly:
+- Double-click **`index.html`** in your file manager, or
+- Right-click `index.html` &rarr; *Open with* &rarr; *Google Chrome*, *Microsoft Edge*, or *Opera GX*.
 
 ---
 
@@ -57,34 +28,36 @@ To publish your site live for free on GitHub Pages:
 
 ```
 Personal_Site/
-├── index.html                  # Main academic homepage (About, Research, Projects, Coursework, References)
-├── cv.html                     # Standalone, printer-friendly academic Curriculum Vitae
-├── .nojekyll                   # Ensures GitHub Pages serves static files directly
+├── index.html                  # Academic homepage (About, Research, Writing, Projects, Coursework, References, CV)
+├── cv.html                     # Standalone full-window PDF viewer for your original CV
+├── start_server.bat            # 1-click batch file to launch local server
+├── serve.ps1                   # Zero-dependency local static server
 ├── assets/
+│   ├── Craig_Nielsen_CV.pdf    # Your official CV PDF
+│   ├── writing samples/
+│   │   ├── Mapping Timbre Space.pdf              # DURF grant proposal on timbre perception geometry
+│   │   └── Why do People Listen to Sad Music.pdf # DURF awarded grant proposal ($1,250) on acoustic features
 │   ├── css/
-│   │   └── style.css           # Clean academic stylesheet (editorial serif, responsive, dark/light theme)
+│   │   └── style.css           # Academic serif stylesheet (light & dark mode, print optimized)
 │   ├── js/
-│   │   └── main.js             # Theme toggle (persisted in localStorage), scrollspy, image fallback
-│   ├── img/
-│   │   ├── favicon.svg         # Academic monogram SVG icon
-│   │   ├── portrait-placeholder.svg # Elegant avatar placeholder until you upload profile.jpg
-│   │   └── profile.jpg         # (Your future photo)
-│   └── Craig_Nielsen_CV.pdf    # (Your future PDF CV)
+│   │   └── main.js             # Theme toggle & persistent preferences
+│   └── img/
+│       ├── profile.jpg         # (Drop your headshot photo here!)
+│       ├── favicon.svg         # Monogram SVG favicon
+│       └── portrait-placeholder.svg # Fallback placeholder until you add your photo
 └── README.md
 ```
 
 ---
 
-## 🎨 Features & Standards for PhD Admissions
+## 📸 Adding Your Photo
+1. Place your headshot into `assets/img/` named **`profile.jpg`** (or `profile.png`).
+2. Refresh the browser. The custom placeholder will automatically be replaced with your photo.
 
-- **Academic Editorial Aesthetics:** Styled with classical serif typography (*Newsreader* / *Charter* / *EB Garamond*) reminiscent of mathematical publications, with crisp modern sans-serif for metadata and labels.
-- **Interdisciplinary Narrative:** Accurately highlights your 3.95 GPA, Honors Data Science curriculum, triple minors (Mathematics, Economics, Music), and prestigious research labs (Pascal Wallisch, Laurence Maloney, Kyunghyun Cho, Ananth Seshadri).
-- **Admissions-Ready Sections:**
-  - **Research Interests:** Out-of-distribution generalization, high-dimensional statistics, causal inference, and cognitive/perceptual modeling.
-  - **Academic Labs & Grants:** NYU Fox Lab ($1,250 DURF grant on sad music), Maloney Lab ($1,250 DURF application on timbre geometry), and UW–Madison CROWE (difference-in-differences tax policy report).
-  - **Coursework Depth:** Proof of mathematical maturity (Honors Real Analysis, Optimization, Probability & Stats, Linear Algebra, Multivariable Calculus).
-  - **Creative Dimension:** Highlights your background as an upright/electric bassist in the NYU All-University Jazz Orchestra and Symphony Orchestra.
-  - **Faculty References:** Formatted contact references for recommendation letters.
-- **Light & Dark Mode:** Smooth toggle with system auto-detection and `localStorage` persistence.
-- **Print Optimization:** Dedicated `@media print` styling so admissions reviewers can print or save a clean, unblemished PDF directly from their browser.
+---
 
+## 🌐 Deploying When You're Ready
+Whenever you decide to make your website public in the future:
+1. In your GitHub repository settings, change visibility from **Private** to **Public**.
+2. Go to **Settings** &rarr; **Pages** &rarr; Select Branch: `main`, Folder: `/ (root)` &rarr; **Save**.
+3. It will immediately publish live on GitHub Pages.
